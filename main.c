@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-#include <bsd/string.h>
+#include <string.h>
 #include <unistd.h>
 
 int	main(void)
@@ -385,12 +385,12 @@ int	main(void)
 	printf("FT_MEMCMP\n");
 	printf("\033[0m");
 
-	const char *largestring = "Foo Bar Baz";
-    const char *smallstring = "Bar";
+	const char *big = "Foo Baz Baz Bar";
+    const char *lit = "";
     char *ptr, *ptr1;
 
-    ptr = strnstr(largestring, smallstring, 4);
-    ptr1 = ft_strnstr(largestring, smallstring, 4);
+    ptr = strnstr(big, lit, 20);
+    ptr1 = ft_strnstr(big, lit, 20);
 
 	printf("strnstr() = %p / ft_strnstr() = %p\n", ptr, ptr1);
 
