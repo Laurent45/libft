@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 13:40:29 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/25 14:35:29 by lfrederi         ###   ########.fr       */
+/*   Created: 2021/11/25 14:37:42 by lfrederi          #+#    #+#             */
+/*   Updated: 2021/11/25 14:52:15 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*tmp;
+	const unsigned char	*tmp_s1;
+	const unsigned char	*tmp_s2;
 	size_t				i;
 
-	if (!s)
-		return (NULL);
-	tmp = (const unsigned char *) s;
+	if (!n || !s1 || !s2)
+		return (0);
+	tmp_s1 = (const unsigned char *) s1;
+	tmp_s2 = (const unsigned char *) s2;
 	i = 0;
-	while (i < n)
-	{
-		if (tmp[i] == (unsigned char) c)
-			return ((void *) &tmp[i]);
+	while ((i < n - 1) && (tmp_s1[i] == tmp_s2[i]))
 		i++;
-	}
-	return (NULL);
+	return (tmp_s1[i] - tmp_s2[i]);
 }

@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 13:40:29 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/25 14:35:29 by lfrederi         ###   ########.fr       */
+/*   Created: 2021/11/25 14:57:09 by lfrederi          #+#    #+#             */
+/*   Updated: 2021/11/25 15:25:56 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <libft.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	const unsigned char	*tmp;
-	size_t				i;
+	size_t	i;
+	size_t	j;
+	size_t	t;
 
-	if (!s)
-		return (NULL);
-	tmp = (const unsigned char *) s;
+	if (!little[0])
+		return ((char *) big);
 	i = 0;
-	while (i < n)
+	j = 0;
+	while (big[i])
 	{
-		if (tmp[i] == (unsigned char) c)
-			return ((void *) &tmp[i]);
+		t = 0;
+		if (big[i] == little[j])
+		{
+			t = i;
+			while ((big[t] == little[j]) && (j < len) && little[j])
+			{
+				t++;
+				j++;
+			}
+			if ((j == len) || !little[j])
+				return ((char *) &big[t]);
+		}
 		i++;
 	}
 	return (NULL);

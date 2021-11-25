@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:04:10 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/25 14:16:04 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/25 15:25:50 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -341,6 +341,7 @@ int	main(void)
 	printf("\033[0m");
 */
 
+/*
 	// FT_MEMCHR
 	printf("\033[0;32m");
 	printf("FT_STRNCMP\n");
@@ -357,6 +358,49 @@ int	main(void)
 	printf("\033[0;32m");
 	printf("----------------------------------------\n\n");
 	printf("\033[0m");
+*/
+
+/*
+	// FT_MEMCMP
+	
+	printf("\033[0;32m");
+	printf("FT_MEMCMP\n");
+	printf("\033[0m");
+	
+	char *s1 = "hello";
+	char *s2 = "hellx";
+
+	printf("memcmp() = %d / ft_memcmp() = %d\n", memcmp(s1, s2, 65), ft_memcmp(s1, s2, 65));
+	printf("ft_memcmp() = %d\n", ft_strncmp(0, 0, 0));
+
+	printf("\033[0;32m");
+	printf("----------------------------------------\n\n");
+	printf("\033[0m");
+
+*/
+
+	// FT_STRNSTR
+	
+	printf("\033[0;32m");
+	printf("FT_MEMCMP\n");
+	printf("\033[0m");
+
+	const char *largestring = "Foo Bar Baz";
+    const char *smallstring = "Bar";
+    char *ptr, *ptr1;
+
+    ptr = strnstr(largestring, smallstring, 4);
+    ptr1 = ft_strnstr(largestring, smallstring, 4);
+
+	printf("strnstr() = %p / ft_strnstr() = %p\n", ptr, ptr1);
+
+
+
+	printf("\033[0;32m");
+	printf("----------------------------------------\n\n");
+	printf("\033[0m");
+
+
 
 	return (0);
 }
