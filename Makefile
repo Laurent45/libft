@@ -21,7 +21,10 @@ SRCS	= 	ft_isalpha.c\
 			ft_strnstr.c\
 			ft_atoi.c\
 			ft_calloc.c\
-			ft_strdup.c
+			ft_strdup.c\
+			ft_substr.c\
+			ft_strjoin.c\
+			ft_strtrim.c
 
 HEADER	= ./
 
@@ -42,7 +45,7 @@ CFLAGS	= -Wall -Wextra -Werror
 	${CC} ${CFLAGS} -I ${HEADER} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-		ar rc ${NAME} ${OBJS}
+		ar rcs ${NAME} ${OBJS}
 
 # A SUPPRIMER
 ${RUN}:	cleanRun

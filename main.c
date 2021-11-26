@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:04:10 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/26 13:40:26 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/26 19:40:41 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,16 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
+
+void	ft_print_result(char const *s)
+{
+	int		len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	write(1, s, len);
+}
 
 int	main(void)
 {
@@ -325,7 +335,7 @@ int	main(void)
 */
 
 	// FT_STRNCMP
-	
+/*	
 	printf("\033[0;32m");
 	printf("FT_STRNCMP\n");
 	printf("\033[0m");
@@ -340,6 +350,7 @@ int	main(void)
 	printf("----------------------------------------\n\n");
 	printf("\033[0m");
 
+*/
 /*
 	// FT_MEMCHR
 	printf("\033[0;32m");
@@ -459,6 +470,55 @@ int	main(void)
 	printf("----------------------------------------\n\n");
 	printf("\033[0m");
 */
+/*
+	//FT_SUBSTR
+	printf("\033[0;32m");
+	printf("FT_SUBSTR\n");
+	printf("\033[0m");
+
+	char str[] = "lorem ipsum dolor sit amet";
+	char *strsub;
+
+	if (!(strsub = ft_substr(str, 0, 10)))
+		ft_print_result("NULL");
+	else
+		ft_print_result(strsub);
+	if (str == strsub)
+		ft_print_result("\nA new string was not returned");
+
+	printf("\033[0;32m");
+	printf("----------------------------------------\n\n");
+	printf("\033[0m");
+*/
+/*
+	//FT_STRJOIN
+	printf("\033[0;32m");
+	printf("FT_STRJOIN\n");
+	printf("\033[0m");
+	
+	//char *s1 = "hello";
+	//char *s2 = " world";
+	printf("%s\n", ft_strjoin(0, 0));
+
+	printf("\033[0;32m");
+	printf("----------------------------------------\n\n");
+	printf("\033[0m");
+*/
+
+	//FT_STRTRIM
+	printf("\033[0;32m");
+	printf("FT_STRTRIM\n");
+	printf("\033[0m");
+
+	char *s1 = "lorem \n ipsum \t dolor \n sit \t amet";
+	char *set = " ";
+	//char *res = ft_strtrim(s1, set);
+	//ft_print_result(res);
+	printf("%s\n", ft_strtrim(s1, set));
+
+	printf("\033[0;32m");
+	printf("----------------------------------------\n\n");
+	printf("\033[0m");
 
 	return (0);
 }
