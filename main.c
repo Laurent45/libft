@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:04:10 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/26 09:51:15 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/26 11:29:56 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -403,6 +403,7 @@ int	main(void)
 	printf("\033[0m");
 */
 
+/*
 	// FT_ATOI
 	
 	printf("\033[0;32m");
@@ -421,6 +422,46 @@ int	main(void)
 	printf("\033[0;32m");
 	printf("----------------------------------------\n\n");
 	printf("\033[0m");
+*/
+
+/*
+	//FT_CALLOC
+
+	printf("\033[0;32m");
+	printf("FT_ATOI\n");
+	printf("\033[0m");
+
+	size_t count = 12;
+	size_t size = 2;
+	char *cal = (char *) calloc(count, size);
+	char *ft_cal = (char *) ft_calloc(count, size);
+	for (size_t i = 0; i < count*size; i++)
+		printf("%d", cal[i]);
+	printf("\n");
+	for (size_t i = 0; i < count*size; i++)
+		printf("%d", ft_cal[i]);
+	printf("\n");
+
+	printf("\033[0;32m");
+	printf("----------------------------------------\n\n");
+	printf("\033[0m");
+*/
+
+	//FT_STRDUP
+
+	printf("\033[0;32m");
+	printf("FT_STRDUP\n");
+	printf("\033[0m");
+
+	char *s1 = "Hello world";
+	char *man = strdup(s1);
+	char *moi = ft_strdup(s1);
+	printf("strdup() = %p - %s / ft_strdup() = %p - %s\n", man, man, moi, moi);
+
+	printf("\033[0;32m");
+	printf("----------------------------------------\n\n");
+	printf("\033[0m");
+
 
 	return (0);
 }
