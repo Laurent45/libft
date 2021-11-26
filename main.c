@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:04:10 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/25 15:25:50 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/26 09:51:15 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <string.h>
 #include <string.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 int	main(void)
 {
@@ -379,6 +380,7 @@ int	main(void)
 
 */
 
+/*
 	// FT_STRNSTR
 	
 	printf("\033[0;32m");
@@ -399,8 +401,26 @@ int	main(void)
 	printf("\033[0;32m");
 	printf("----------------------------------------\n\n");
 	printf("\033[0m");
+*/
 
+	// FT_ATOI
+	
+	printf("\033[0;32m");
+	printf("FT_ATOI\n");
+	printf("\033[0m");
 
+	printf("atoi() = %d / ft_atoi() = %d\n", atoi("127"), ft_atoi("127"));
+	printf("atoi() = %d / ft_atoi() = %d\n", atoi("    127"), ft_atoi("    127"));
+	printf("atoi() = %d / ft_atoi() = %d\n", atoi("  \t\n\v\r-127"), ft_atoi("  \t\n\v\r-127"));
+	printf("atoi() = %d / ft_atoi() = %d\n", atoi("     --127"), ft_atoi("     --127"));
+	printf("atoi() = %d / ft_atoi() = %d\n", atoi("   -127987"), ft_atoi("   -127987"));
+	printf("atoi() = %d / ft_atoi() = %d\n", atoi("+0de"), ft_atoi("+0de"));
+	printf("atoi() = %d / ft_atoi() = %d\n", atoi("+a12de"), ft_atoi("+a12de"));
+	printf("atoi() = %d / ft_atoi() = %d\n", atoi("123456789"), ft_atoi("123456789"));
+
+	printf("\033[0;32m");
+	printf("----------------------------------------\n\n");
+	printf("\033[0m");
 
 	return (0);
 }
