@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:04:10 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/26 11:29:56 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/26 13:40:26 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -324,23 +324,21 @@ int	main(void)
 	printf("\033[0m");
 */
 
-/*
 	// FT_STRNCMP
 	
 	printf("\033[0;32m");
 	printf("FT_STRNCMP\n");
 	printf("\033[0m");
 	
-	char *s1 = "hello";
-	char *s2 = "hellx";
+	char *s1 = "test\200";
+	char *s2 = "test\0";
 
-	printf("strncmp() = %d / ft_strncmp() = %d\n", strncmp(s1, s2, 5), ft_strncmp(s1, s2, 5));
+	printf("strncmp() = %d / ft_strncmp() = %d\n", strncmp(s1, s2, 6), ft_strncmp(s1, s2, 6));
 	printf("ft_strncmp() = %d\n", ft_strncmp(0, s2, 5));
 
 	printf("\033[0;32m");
 	printf("----------------------------------------\n\n");
 	printf("\033[0m");
-*/
 
 /*
 	// FT_MEMCHR
@@ -387,13 +385,12 @@ int	main(void)
 	printf("FT_MEMCMP\n");
 	printf("\033[0m");
 
-	const char *big = "Foo Baz Baz Bar";
-    const char *lit = "";
+	const char *big = "lorem ipsum dolor sit amet";
+    const char *lit = "dolor";
     char *ptr, *ptr1;
 
-    ptr = strnstr(big, lit, 20);
-    ptr1 = ft_strnstr(big, lit, 20);
-
+    ptr = strnstr(big, lit, 15);
+    ptr1 = ft_strnstr(big, lit, 15);
 	printf("strnstr() = %p / ft_strnstr() = %p\n", ptr, ptr1);
 
 
@@ -448,7 +445,7 @@ int	main(void)
 */
 
 	//FT_STRDUP
-
+/*
 	printf("\033[0;32m");
 	printf("FT_STRDUP\n");
 	printf("\033[0m");
@@ -461,7 +458,7 @@ int	main(void)
 	printf("\033[0;32m");
 	printf("----------------------------------------\n\n");
 	printf("\033[0m");
-
+*/
 
 	return (0);
 }

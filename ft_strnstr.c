@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 14:57:09 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/25 15:25:56 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/26 13:18:42 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		{
 			j = 1;
 			t = i + 1;
-			while ((big[t] == little[j]) && little[j])
+			while ((big[t] == little[j]) && little[j] && (t < len))
 			{
 				t++;
 				j++;
