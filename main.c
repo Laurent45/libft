@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:04:10 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/26 19:40:41 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/27 20:15:56 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ void	ft_print_result(char const *s)
 
 int	main(void)
 {
-	/*
-	// FT_ISALPHA
+	/* //FT_ISALPHA
 	printf("\033[0;32m");
 	printf("FT_ISALPHA\n");
 	printf("\033[0m");
@@ -42,9 +41,10 @@ int	main(void)
 	printf("isalpha(-547) = %d / ft_isalpha(-547) = %d\n", isalpha(-547), ft_isalpha(-547));
 	printf("\033[0;32m");
 	printf("----------------------------------------\n\n");
-	printf("\033[0m");
+	printf("\033[0m");*/
+	
 
-	// FT_ISDIGIT
+	/* //FT_ISDIGIT
 	printf("\033[0;32m");
 	printf("FT_ISDIGIT\n");
 	printf("\033[0m");
@@ -55,9 +55,9 @@ int	main(void)
 	printf("isdigit(-547) = %d / ft_isdigit(-547) = %d\n", isdigit(-547), ft_isdigit(-547));
 	printf("\033[0;32m");
 	printf("----------------------------------------\n\n");
-	printf("\033[0m");
+	printf("\033[0m");*/
 
-	// FT_ISALNUM
+	/* //FT_ISALNUM
 	printf("\033[0;32m");
 	printf("FT_ISALNUM\n");
 	printf("\033[0m");
@@ -70,9 +70,9 @@ int	main(void)
 	printf("isalnum(-547) = %d / ft_isalnum(-547) = %d\n", isalnum(-547), ft_isalnum(-547));
 	printf("\033[0;32m");
 	printf("----------------------------------------\n\n");
-	printf("\033[0m");
+	printf("\033[0m");*/
 
-	// FT_ISASCII
+	/* //FT_ISASCII
 	printf("\033[0;32m");
 	printf("FT_ISASCII\n");
 	printf("\033[0m");
@@ -511,7 +511,7 @@ int	main(void)
 	printf("\033[0m");
 
 	char *s1 = "lorem \n ipsum \t dolor \n sit \t amet";
-	char *set = " ";
+	char *set = "et";
 	//char *res = ft_strtrim(s1, set);
 	//ft_print_result(res);
 	printf("%s\n", ft_strtrim(s1, set));

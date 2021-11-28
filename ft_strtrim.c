@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 17:24:23 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/26 23:22:33 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/28 09:46:20 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_isset(const char c, const char *set)
 	return (0);
 }
 
-static size_t	ft_lentrim(char const *s1, char const *set)
+static size_t	ft_lentrim(char const *s1, const char *set)
 {
 	size_t	start;
 	size_t	end;
