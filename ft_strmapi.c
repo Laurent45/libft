@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 15:07:09 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/29 15:42:31 by lfrederi         ###   ########.fr       */
+/*   Created: 2021/11/29 13:55:08 by lfrederi          #+#    #+#             */
+/*   Updated: 2021/11/29 14:27:11 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*ret;
-	size_t	len_s;
+	char	*map;
+	size_t	len;
 	size_t	i;
-	size_t	size;
 
 	if (!s)
 		return (NULL);
-	len_s = ft_strlen(s);
-	if (start >= (unsigned int) len_s)
-		return ((char *) ft_calloc(1, 1));
-	size = len_s - start;
-	if (size < len)
-		len = size;
-	ret = (char *) ft_calloc((len + 1), 1);
-	if (!ret)
+	len = ft_strlen(s);
+	map = (char *) malloc(sizeof(char) * (len + 1));
+	if (!map)
 		return (NULL);
 	i = 0;
-	while (s[start] && i < len)
+	while (i < len)
 	{
-		ret[i] = s[start];
-		start++;
+		map[i] = f((unsigned int) i, s[i]);
 		i++;
 	}
-	return (ret);
+	map[i] = '\0';
+	return (map);
 }

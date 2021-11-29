@@ -1,41 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 15:07:09 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/29 15:42:31 by lfrederi         ###   ########.fr       */
+/*   Created: 2021/11/29 14:32:28 by lfrederi          #+#    #+#             */
+/*   Updated: 2021/11/29 14:41:34 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	*ret;
-	size_t	len_s;
 	size_t	i;
-	size_t	size;
 
 	if (!s)
-		return (NULL);
-	len_s = ft_strlen(s);
-	if (start >= (unsigned int) len_s)
-		return ((char *) ft_calloc(1, 1));
-	size = len_s - start;
-	if (size < len)
-		len = size;
-	ret = (char *) ft_calloc((len + 1), 1);
-	if (!ret)
-		return (NULL);
+		return ;
 	i = 0;
-	while (s[start] && i < len)
+	while (s[i])
 	{
-		ret[i] = s[start];
-		start++;
+		f((unsigned int) i, &s[i]);
 		i++;
 	}
-	return (ret);
 }
