@@ -34,9 +34,13 @@ SRCS	= 	ft_isalpha.c\
 			ft_putendl_fd.c\
 			ft_putnbr_fd.c
 
+SRCS_BONUS = ft_lstnew.c ft_lstadd_front.c
+
 HEADER	= ./
 
 OBJS	= ${SRCS:.c=.o}
+
+OBJS_BONUS = ${SRCS_BONUS:.c=.o}
 
 NAME	= libft.a
 
@@ -59,6 +63,9 @@ ${NAME}:	${OBJS}
 ${RUN}:	cleanRun
 		${CC} ${CFLAGS} -o ${RUN} main.c -L. -lft
 
+bonus:	${NAME} ${OBJS_BONUS}
+		ar r ${NAME} ${OBJS_BONUS}
+
 clean:
 		${RM} ${OBJS}
 
@@ -74,9 +81,9 @@ fclean:	clean
 re:		fclean all
 
 # A SUPPRIMER
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
+#so:
+#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+#	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 
 .PHONY:	all clean fclean re
