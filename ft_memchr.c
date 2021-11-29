@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:40:29 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/25 14:35:29 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/29 12:52:59 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	const unsigned char	*tmp;
 	size_t				i;
 
-	if (!s)
-		return (NULL);
 	tmp = (const unsigned char *) s;
 	i = 0;
 	while (i < n)

@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 12:35:35 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/24 12:32:45 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/29 12:47:07 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t			i;
 	char			*tmp;
 
-	if (!s)
-		return (0);
 	i = 0;
 	tmp = (char *) s;
 	while (i < n)

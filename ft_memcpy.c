@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 16:42:36 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/25 11:06:19 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/29 12:40:44 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char		*tmp_dest;
 	const char	*tmp_src;
 
-	if (!dest || !src)
+	if (!dest && !src)
 		return (dest);
 	i = 0;
 	tmp_src = (const char *) src;

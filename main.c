@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:04:10 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/27 20:15:56 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/29 12:37:26 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -207,18 +207,31 @@ int	main(void)
 	printf("\033[0m");
 	*/
 
-/*
+
 	//FT_MEMMOVE
 	
 	printf("\033[0;32m");
 	printf("FT_MEMMOVE\n");
 	printf("\033[0m");
 
-	char str[40] = "Hello world, how are you";
-	char *res = (char *) ft_memmove((void *) str, (const void *) (str + 6), 9);
-	for (int i = 0; i < 10; i++)
-		printf("%c", res[i]);
-	printf("\n");
+	//char str[40] = "Hello world, how are you";
+	//char *res = (char *) ft_memmove((void *) str, (const void *) (str + 6), 9);
+	//for (int i = 0; i < 10; i++)
+	//	printf("%c", res[i]);
+	//printf("\n");
+	//char *src = "thanks to @apellicc for this test !\r\n";
+	//char dst1[0xF0];
+	//int size = strlen(src);
+	//char *r1 = memmove(dst1, src, size);
+	//char *r2 = ft_memmove(dst1, src, size);
+	//if (r1 != r2)
+	//	printf("error\n");
+	//r1 = memmove("", "" - 1, 0);
+	//r2 = ft_memmove("", "" - 1, 0);
+	//if (r1 != r2)
+	//	printf("error\n");
+	//printf("success\n");
+
 
 	//char str[40] = "Hello world, how are you";
 	//char *res = (char *) ft_memmove((void *) (str + 12), (const void *) (str + 6), 13);
@@ -226,13 +239,13 @@ int	main(void)
 	//	printf("%c", res[i]);
 	//printf("\n");
 
-	//ft_memmove(0, 0, 6);
+	memmove(0, 0, 6);
 
 
 	printf("\033[0;32m");
 	printf("----------------------------------------\n\n");
 	printf("\033[0m");
-*/
+
 
 /*	
 	//FT_STRLCPY
@@ -505,6 +518,7 @@ int	main(void)
 	printf("\033[0m");
 */
 
+/*
 	//FT_STRTRIM
 	printf("\033[0;32m");
 	printf("FT_STRTRIM\n");
@@ -519,6 +533,7 @@ int	main(void)
 	printf("\033[0;32m");
 	printf("----------------------------------------\n\n");
 	printf("\033[0m");
+*/
 
 	return (0);
 }
