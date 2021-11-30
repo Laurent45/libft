@@ -38,7 +38,7 @@ bonus:	${NAME} ${OBJS_BONUS}
 		ar r ${NAME} ${OBJS_BONUS}
 
 clean:
-		${RM} ${OBJS}
+		${RM} ${OBJS} ${OBJS_BONUS}
 
 all:	${NAME}
 
