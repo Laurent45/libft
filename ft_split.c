@@ -6,13 +6,12 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 09:46:35 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/28 15:17:03 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/11/30 16:10:43 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 static size_t	ft_lensplit(char const *s, char c)
 {
