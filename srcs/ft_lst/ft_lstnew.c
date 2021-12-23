@@ -6,11 +6,11 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 21:29:23 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/29 21:33:41 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/12/23 16:32:59 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../headers/ft_lst.h"
 #include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)

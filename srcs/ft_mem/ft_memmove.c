@@ -6,11 +6,11 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:46:50 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/29 12:39:34 by lfrederi         ###   ########.fr       */
+/*   Updated: 2021/12/23 15:46:50 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../headers/ft_mem.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

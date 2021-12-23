@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 09:45:33 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/30 10:38:00 by lfrederi         ###   ########.fr       */
+/*   Created: 2021/11/23 15:56:36 by lfrederi          #+#    #+#             */
+/*   Updated: 2021/12/23 15:59:53 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	ft_bzero(void *s, size_t n)
 {
-	t_list	*map;
-	t_list	*tmp;
-	t_list	*next;
+	unsigned char	*tmp;
+	size_t			i;
 
-	if (!lst)
-		return (NULL);
-	map = ft_lstnew(f(lst->content));
-	if (!map)
-		return (NULL);
-	tmp = lst->next;
-	while (tmp)
+	i = 0;
+	tmp = (unsigned char *) s;
+	while (i < n)
 	{
-		next = ft_lstnew(f(tmp->content));
-		if (!next)
-		{
-			ft_lstclear(&map, del);
-			break ;
-		}
-		ft_lstadd_back(&map, next);
-		tmp = tmp->next;
+		tmp[i] = 0;
+		i++;
 	}
-	return (map);
 }
