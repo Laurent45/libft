@@ -6,12 +6,12 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 17:24:23 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/28 09:46:20 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/01/07 13:46:41 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
+#include "../../headers/ft_string.h"
 
 static int	ft_isset(const char c, const char *set)
 {

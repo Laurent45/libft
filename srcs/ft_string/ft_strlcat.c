@@ -6,11 +6,11 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:53:55 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/24 18:08:09 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/01/07 13:41:39 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../headers/ft_string.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

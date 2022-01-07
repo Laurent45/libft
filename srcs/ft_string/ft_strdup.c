@@ -6,11 +6,12 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 10:47:28 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/26 11:30:05 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/01/07 13:43:32 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../headers/ft_string.h"
+#include "../../headers/ft_mem.h"
 
 char	*ft_strdup(const char *s1)
 {

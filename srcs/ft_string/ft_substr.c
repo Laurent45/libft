@@ -6,11 +6,12 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:07:09 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/29 15:42:31 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/01/07 13:45:02 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../headers/ft_string.h"
+#include "../../headers/ft_mem.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

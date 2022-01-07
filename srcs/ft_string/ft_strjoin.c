@@ -6,12 +6,12 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 16:16:06 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/26 17:01:27 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/01/07 13:45:53 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "../../headers/ft_string.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

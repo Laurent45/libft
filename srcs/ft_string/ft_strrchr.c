@@ -6,11 +6,11 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 10:34:15 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/29 12:59:22 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/01/07 13:42:18 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../headers/ft_string.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

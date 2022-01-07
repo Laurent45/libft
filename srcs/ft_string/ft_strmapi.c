@@ -6,12 +6,12 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 13:55:08 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/11/29 14:27:11 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/01/07 13:47:54 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
+#include "../../headers/ft_string.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
