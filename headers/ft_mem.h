@@ -6,14 +6,14 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 15:19:28 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/12/23 16:00:40 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/01/07 14:24:45 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_MEM_H
 # define FT_MEM_H
 
-#include <stddef.h>
+# include <stddef.h>
 
 /*
  * Writes n bytes of value c (converted to an usigned char)

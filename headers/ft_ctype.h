@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 14:53:20 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/12/23 15:15:53 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/01/07 14:21:03 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,4 @@ int		ft_isascii(int c);
  * Return: false (0) / true (non-negative)
  */
 int		ft_isprint(int c);
-
-
 #endif

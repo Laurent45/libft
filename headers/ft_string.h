@@ -6,14 +6,14 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 16:37:01 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/12/23 16:58:38 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/01/07 14:26:44 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STRING_H
 # define FT_STRING_H
 
-#include <stddef.h>
+# include <stddef.h>
 
 /*
  * See man (strlcpy)
@@ -51,7 +51,7 @@ size_t	ft_strlen(const char *s);
  */
 char	*ft_strchr(const char *s, int c);
 
- /*
+/*
  * Locates the last occurrence of c (char) in the string pointed to by s.
  * The '\0' is considered to be part of the string; therefore if c is `\0',
  * the functions locate the terminating `\0'.
@@ -73,7 +73,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 /*
- * Converts the initial portion of the string pointed to by str to int representation.
+ * Converts the initial portion of the string pointed to by str
+ * to int representation.
  * Return: result of conversion.
  */
 int		ft_atoi(const char *str);
