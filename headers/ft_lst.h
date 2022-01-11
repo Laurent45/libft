@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 16:05:48 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/01/11 16:03:06 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/01/11 16:47:06 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_lstadd_front(t_list **alst, t_list *new);
 int		ft_lstsize(t_list *lst);
 
 /*
- * Return: the last node of th list
+ * Return: the last node of the list
  */
 t_list	*ft_lstlast(t_list *lst);
 
