@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 09:38:29 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/02/04 15:35:21 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/04/13 22:36:58 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,6 @@ static int	ft_formatting(const char *s, va_list *ap, t_putflag *f, t_args *arg)
 int	ft_printf(const char *s, ...)
 {
 	va_list		ap;
-	int			i;
 	int			ret;
 	t_putflag	f[9];
 	t_args		arg;
@@ -109,7 +108,6 @@ int	ft_printf(const char *s, ...)
 	ft_fill_array(f);
 	ft_init_t_args(&arg);
 	va_start(ap, s);
-	i = -1;
 	ret = 0;
 	ret = ft_formatting(s, &ap, f, &arg);
 	va_end(ap);
