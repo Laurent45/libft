@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 13:54:03 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/02/04 15:48:35 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/04/13 23:29:50 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-/*
+/******************************************************************************
  * Get next line.
- */
+ *****************************************************************************/
 # define FD_MAX 1024
 # define BUFFER_SIZE 1024
 
@@ -42,9 +42,9 @@ char	*ft_createline(int fd, char *curr);
 int		ft_isnewline(char *str);
 char	*ft_getbuffer(t_buffd *buffd, int fd);
 
-/*
+/******************************************************************************
  * Printf
- */
+ *****************************************************************************/
 int		ft_printf(const char *s, ...);
 
 typedef struct s_args
