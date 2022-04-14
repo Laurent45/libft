@@ -6,7 +6,7 @@
 /*   By: lfrederi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 17:04:06 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/02/04 15:37:33 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/04/14 11:54:49 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_isformat(char c)
 	return (0);
 }
 
-int	ft_isdigit(char c)
+int	ft_digit(char c)
 {
 	const char	*digit;
 	int			i;

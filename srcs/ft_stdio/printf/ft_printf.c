@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 09:38:29 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/04/13 22:36:58 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/04/14 11:54:49 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,19 +52,19 @@ static int	ft_isflag(int i, const char *s, t_args *arg)
 	if (s[i] == '-')
 	{
 		if ((arg->minus_flag == -1)
-			|| ((arg->minus_flag > -1) && (ft_isdigit(s[i + 1]))))
+			|| ((arg->minus_flag > -1) && (ft_digit(s[i + 1]))))
 			arg->minus_flag = 0;
-		while (ft_isdigit(s[++i]))
+		while (ft_digit(s[++i]))
 			arg->minus_flag = arg->minus_flag * 10 + (s[i] - '0');
 	}
 	if (s[i] == '.')
 	{
 		arg->dot_flag = 0;
-		while (ft_isdigit(s[++i]))
+		while (ft_digit(s[++i]))
 			arg->dot_flag = arg->dot_flag * 10 + (s[i] - '0');
 	}
-	if (ft_isdigit(s[i]) && (s[i] - '0'))
-		while (ft_isdigit(s[i]))
+	if (ft_digit(s[i]) && (s[i] - '0'))
+		while (ft_digit(s[i]))
 			arg->digit_padding = arg->digit_padding * 10 + (s[i++] - '0');
 	return (i);
 }
