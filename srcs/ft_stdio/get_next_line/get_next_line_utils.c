@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 12:01:30 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/02/04 15:48:39 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/04/14 14:48:14 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ size_t	ft_strlen_gnl(char *buf)
 	return (len);
 }
 
-void	ft_strlcat(char *dest, char *src, size_t lencopy)
+void	ft_strlcat_gnl(char *dest, char *src, size_t lencopy)
 {
 	size_t	i;
 	size_t	j;

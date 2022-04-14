@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 12:44:32 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/04/13 22:34:35 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/04/14 14:48:10 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ char	*ft_createline(int fd, char *curr)
 	if (!ret)
 		return (NULL);
 	ret[0] = 0;
-	ft_strlcat(ret, curr, lencurr);
+	ft_strlcat_gnl(ret, curr, lencurr);
 	if (curr)
 		free(curr);
-	ft_strlcat(ret, buf, size_copy);
+	ft_strlcat_gnl(ret, buf, size_copy);
 	ft_managebuffer(buf, ft_strlen_gnl(buf), size_copy);
 	return (ret);
 }

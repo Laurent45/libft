@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 13:54:03 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/04/14 11:54:49 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/04/14 14:47:46 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef struct s_buffd
 char	*get_next_line(int fd);
 size_t	ft_sizetocpy(char *buf);
 size_t	ft_strlen_gnl(char *buf);
-void	ft_strlcat(char *dest, char *src, size_t lencopy);
+void	ft_strlcat_gnl(char *dest, char *src, size_t lencopy);
 void	ft_managebuffer(char *buf, size_t lenbuffer, size_t lencopy);
 char	*ft_createline(int fd, char *curr);
 int		ft_isnewline(char *str);
