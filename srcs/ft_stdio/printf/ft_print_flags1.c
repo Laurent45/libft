@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 23:30:39 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/02/04 15:34:48 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/04/14 14:55:04 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	ft_print_s(va_list *ap, t_args *args)
 	if (!s)
 		len = 6;
 	else
-		len = ft_strlen(s);
+		len = ft_strlen_pf(s);
 	if ((args->dot_flag < len) && (args->dot_flag >= 0))
 		len = args->dot_flag;
 	else

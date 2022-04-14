@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 13:54:03 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/04/14 14:47:46 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/04/14 14:54:28 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int		ft_putstr(const char *s, int size);
 int		ft_putchar(char c);
 int		ft_putzero(int n);
 int		ft_putblank(int n);
-int		ft_strlen(const char *s);
+int		ft_strlen_pf(const char *s);
 
 //ft_utils.c
 void	ft_fill_array(t_putflag flags[9]);

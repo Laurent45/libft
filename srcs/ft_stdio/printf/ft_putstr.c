@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 23:18:26 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/12/16 16:08:41 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/04/14 14:55:32 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_putstr(const char *s, int size)
 	return (size);
 }
 
-int	ft_strlen(const char *s)
+int	ft_strlen_pf(const char *s)
 {
 	int	len;
 
