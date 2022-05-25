@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 16:37:01 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/01/07 14:26:44 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/05/25 14:23:58 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,11 @@ char	*ft_strchr(const char *s, int c);
  * Return: locate of last occurence or NULL.
  */
 char	*ft_strrchr(const char *s, int c);
+
+/*
+ * See man (strcmp)
+ */
+int		ft_strcmp(const char *s1, const char *s2);
 
 /*
  * See man (strncmp)
