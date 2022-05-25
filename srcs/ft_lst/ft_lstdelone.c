@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 09:07:42 by lfrederi          #+#    #+#             */
-/*   Updated: 2021/12/23 16:31:13 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/05/25 14:57:41 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (lst)
 	{
-		del(lst->content);
+		if (del)
+			del(lst->content);
 		free(lst);
 	}
 }
