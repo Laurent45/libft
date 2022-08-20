@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 16:37:01 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/05/31 09:43:10 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/08/20 11:20:08 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
  * Return: result of conversion.
  */
 int		ft_atoi(const char *str);
+
+/*
+ * Converts the initial portion of the string pointed to by str
+ * to long representation.
+ * Return: result of conversion.
+ */
+long	ft_atol(const char *str);
 
 /*
  * Allocates sufficient memory for a copy of the string s1, does the copy.
