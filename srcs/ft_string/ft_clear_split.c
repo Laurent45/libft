@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_clear_split.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/24 20:22:00 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/05/31 09:47:22 by lfrederi         ###   ########.fr       */
+/*   Created: 2022/05/31 09:43:28 by lfrederi          #+#    #+#             */
+/*   Updated: 2022/05/31 09:47:53 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(const char *s1, const char *s2)
+#include <stdlib.h>
+
+void	ft_clear_split(char **split)
 {
 	int	i;
 
 	i = 0;
-	while ((s1[i] == s2[i]) && s1[i])
+	while (split[i])
+	{
+		free(split[i]);
 		i++;
-	return ((s2[i] - s1[i]));
+	}
+	free(split);
 }
