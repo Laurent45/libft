@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 13:54:03 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/04/14 14:54:28 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/09/06 11:45:15 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ int		ft_putzero_dotflag(t_args *arg, int len);
 int		ft_putzero_zeroflag(t_args *arg, int len);
 void	ft_put_sharpflag(t_args *arg, unsigned int n, int upper);
 
-int		ft_getindex(t_putflag flags[9], char c);
+int		ft_getindex(t_putflag *flags, char c);
 int		ft_isformat(char c);
 int		ft_digit(char c);
 int		ft_isarguments(char c);
