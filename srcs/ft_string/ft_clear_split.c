@@ -6,7 +6,7 @@
 /*   By: lfrederi <lfrederi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 09:43:28 by lfrederi          #+#    #+#             */
-/*   Updated: 2022/09/10 10:44:24 by lfrederi         ###   ########.fr       */
+/*   Updated: 2022/09/10 11:44:47 by lfrederi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	ft_clear_split(char **split)
 		i++;
 	}
 	free(split);
-	*split = NULL;
+	split = NULL;
 }
