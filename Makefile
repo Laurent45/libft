@@ -1,46 +1,45 @@
 
-SRCS	= 	$(addprefix srcs/ft_ctype/, ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c)\
-			$(addprefix srcs/ft_mem/, ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_memcmp.c ft_calloc.c)\
-			$(addprefix srcs/ft_string/, ft_strlen.c ft_strlcpy.c ft_strlcat.c\
-										ft_toupper.c ft_tolower.c\
-										ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strcmp.c ft_strnstr.c\
-										ft_atoi.c ft_atol.c ft_itoa.c\
-										ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_clear_split.c\
-										ft_strmapi.c ft_striteri.c)\
-			$(addprefix srcs/ft_stdio/, ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
-										get_next_line/get_next_line.c get_next_line/get_next_line_utils.c\
-										printf/ft_print_flags.c printf/ft_print_flags1.c printf/ft_putnbr.c\
-										printf/ft_putstr.c printf/ft_utils.c printf/ft_utils1.c printf/ft_utils2.c\
-										printf/ft_printf.c)\
-			$(addprefix srcs/ft_lst/, ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
-			 						  ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c)
+SRCS_DIR = ./srcs
+SRCS = $(shell find $(SRCS_DIR) -name '*.c')
 
-HEADER	= ./headers/
+HEADER_DIR = $(shell find $(SRCS_DIR) -name 'headers' -type d)
+HEADERS_FLAGS = $(addprefix -I,$(HEADER_DIR))
 
-OBJS	= ${SRCS:.c=.o}
+BUILD_DIR = ./build
+OBJS	= $(SRCS:%=$(BUILD_DIR)/%.o)
+DEPS = $(OBJS:.o=.d)
 
 NAME	= libft.a
 
 CC		= gcc
 
 RM		= rm -f
+RMDIR = rm -Rf
 
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -MMD -MP
 
-.c.o:
-	${CC} ${CFLAGS} -I ${HEADER} -c $< -o ${<:.c=.o}
+$(BUILD_DIR)/%.c.o: %.c
+	@mkdir -p $(dir $@)
+	@printf "[X] Creating object files\r"
+	@$(CC) $(CFLAGS) $(HEADERS_FLAGS) -c $< -o $@
 
-${NAME}:	${OBJS}
-		ar rcs ${NAME} ${OBJS}
+$(NAME): $(OBJS)
+		@printf "\nObject files created\n"
+		@ar rcs $(NAME) $(OBJS)
+		@printf "libft librairy compiled\n"
 
 clean:
-		${RM} ${OBJS} 
+		$(RMDIR) $(BUILD_DIR) 
 
-all:	${NAME}
+all:	$(NAME)
 
 fclean:	clean
-		${RM} ${NAME}
+		$(RM) $(NAME)
 
 re:		fclean all
 
+test:
+	@echo "test"
+
 .PHONY:	all clean fclean re
+-include $(DEPS)

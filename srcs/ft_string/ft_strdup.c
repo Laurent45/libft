@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_string.h"
-#include "../../headers/ft_mem.h"
+#include "headers/ft_string.h"
+#include "../ft_mem/headers/ft_mem.h"
 
 char	*ft_strdup(const char *s1)
 {

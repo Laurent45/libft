@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../headers/ft_stdio.h"
+#include "../headers/ft_stdio.h"
 #include <unistd.h>
 
 int	ft_padding_blank(t_args *arg, long n, int s)

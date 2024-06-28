@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_lst.h"
 #include <stdlib.h>
+#include "headers/ft_lst.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {

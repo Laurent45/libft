@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../headers/ft_stdio.h"
+#include "../headers/ft_stdio.h"
 
 void	ft_putnbr_x(unsigned int nbr, int upper)
 {

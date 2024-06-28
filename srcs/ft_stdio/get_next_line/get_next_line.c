@@ -13,7 +13,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "../../../headers/ft_stdio.h"
+#include "../headers/ft_stdio.h"
 
 char	*ft_createline(int fd, char *curr)
 {

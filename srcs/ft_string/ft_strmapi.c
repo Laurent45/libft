@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "../../headers/ft_string.h"
+#include "headers/ft_string.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

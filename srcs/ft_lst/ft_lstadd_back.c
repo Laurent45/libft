@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_lst.h"
+#include "headers/ft_lst.h"
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {

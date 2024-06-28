@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../headers/ft_stdio.h"
+#include "../headers/ft_stdio.h"
 
 int	ft_getindex(t_putflag *flags, char c)
 {

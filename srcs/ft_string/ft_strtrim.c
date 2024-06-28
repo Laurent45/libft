@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "../../headers/ft_string.h"
+#include "headers/ft_string.h"
 
 static int	ft_isset(const char c, const char *set)
 {

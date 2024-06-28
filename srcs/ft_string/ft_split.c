@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "../../headers/ft_string.h"
+#include "headers/ft_string.h"
 
 static size_t	ft_lensplit(char const *s, char c)
 {

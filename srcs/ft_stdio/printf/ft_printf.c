@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../headers/ft_stdio.h"
+#include "../headers/ft_stdio.h"
 
 static int	ft_printargs(t_args *arg, va_list *ap, t_putflag *f)
 {

@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_lst.h"
 #include <stdlib.h>
+#include "headers/ft_lst.h"
 
 t_list	*ft_lstnew(void *content)
 {

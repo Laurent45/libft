@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_mem.h"
+#include "headers/ft_mem.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

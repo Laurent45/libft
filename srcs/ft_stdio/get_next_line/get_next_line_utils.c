@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../headers/ft_stdio.h"
+#include "../headers/ft_stdio.h"
 #include <stdlib.h>
 #include <unistd.h>
 

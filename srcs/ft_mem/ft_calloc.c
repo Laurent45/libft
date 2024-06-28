@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_mem.h"
+#include "headers/ft_mem.h"
 #include <stdlib.h>
 #include <stddef.h>
 
