@@ -20,13 +20,14 @@ CFLAGS	= -Wall -Wextra -Werror -MMD -MP
 
 $(BUILD_DIR)/%.c.o: %.c
 	@mkdir -p $(dir $@)
-	@printf "[X] Creating object files\r"
+	@printf "[+] Creating object files\r"
 	@$(CC) $(CFLAGS) $(HEADERS_FLAGS) -c $< -o $@
+	@printf "[x] Creating object files\r"
 
 $(NAME): $(OBJS)
 		@printf "\nObject files created\n"
 		@ar rcs $(NAME) $(OBJS)
-		@printf "libft librairy compiled\n"
+		@printf "Libft librairy compiled\n"
 
 clean:
 		$(RMDIR) $(BUILD_DIR) 
@@ -37,9 +38,6 @@ fclean:	clean
 		$(RM) $(NAME)
 
 re:		fclean all
-
-test:
-	@echo "test"
 
 .PHONY:	all clean fclean re
 -include $(DEPS)
