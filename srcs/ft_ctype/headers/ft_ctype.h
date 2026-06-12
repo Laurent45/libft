@@ -14,32 +14,32 @@
 # define FT_CTYPE_H
 
 /*
- * Check if c is an alphabetic character (upper and lower case)
- * Return: false (0) / true (non-negative)
+ * Checks if c is an alphabetic character (uppercase or lowercase).
+ * Return: 0 if false, a non-zero value if true.
  */
 int		ft_isalpha(int c);
 
 /*
- * Check if c is a decimal-digit character 
- * Return: false (0) / true (non-negative)
+ * Checks if c is a decimal digit character ('0' to '9').
+ * Return: 0 if false, a non-zero value if true.
  */
 int		ft_isdigit(int c);
 
 /*
- * Check if c is an alphanumeric character 
- * Return: false (0) / true (non-negative)
+ * Checks if c is an alphanumeric character (letter or decimal digit).
+ * Return: 0 if false, a non-zero value if true.
  */
 int		ft_isalnum(int c);
 
 /*
- * Check if c is an ASCII character 
- * Return: false (0) / true (non-negative)
+ * Checks if c is an ASCII character (0 to 127).
+ * Return: 0 if false, a non-zero value if true.
  */
 int		ft_isascii(int c);
 
 /*
- * Check if c is a printing character (' ' to '~') 
- * Return: false (0) / true (non-negative)
+ * Checks if c is a printable character, space included (' ' to '~').
+ * Return: 0 if false, a non-zero value if true.
  */
 int		ft_isprint(int c);
 #endif

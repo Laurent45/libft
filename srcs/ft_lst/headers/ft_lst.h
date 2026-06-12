@@ -13,6 +13,10 @@
 #ifndef FT_LST_H
 # define FT_LST_H
 
+/*
+ * Node of a singly linked list. content points to the data held by
+ * the node, next points to the following node (NULL for the last one).
+ */
 typedef struct s_list
 {
 	void			*content;
@@ -20,56 +24,65 @@ typedef struct s_list
 }	t_list;
 
 /*
- * Create a new node with content.
- * Return pointeur of new node or NULL if allocating failed
+ * Allocates and returns a new node initialized with content.
+ * The next pointer of the node is set to NULL.
+ * Return: the new node, or NULL if allocation failed.
  */
 t_list	*ft_lstnew(void *content);
 
 /*
- * Add a new node at front of the list (new becoming first node).
- * Return: nothing
+ * Adds the node new at the beginning of the list pointed to by alst
+ * (new becomes the first node).
+ * Return: nothing.
  */
 void	ft_lstadd_front(t_list **alst, t_list *new);
 
 /*
- * Get the size of the list.
- * Return: size of the list.
+ * Counts the number of nodes in the list.
+ * Return: the size of the list (0 if lst is NULL).
  */
 int		ft_lstsize(t_list *lst);
 
 /*
- * Return: the last node of the list
+ * Walks the list to its end.
+ * Return: the last node of the list, or NULL if lst is NULL.
  */
 t_list	*ft_lstlast(t_list *lst);
 
 /*
- * Add a new node at back of the list (new becoming last node).
+ * Adds the node new at the end of the list pointed to by alst
+ * (new becomes the last node).
  * Return: nothing.
  */
 void	ft_lstadd_back(t_list **alst, t_list *new);
 
 /*
- * Delete the node lst with del.
+ * Frees the single node lst: its content is released with the
+ * function del (if provided), then the node itself is freed.
+ * The next node is not affected.
  * Return: nothing.
  */
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 
 /*
- * Delete all nodes with del.
+ * Deletes and frees every node of the list using ft_lstdelone,
+ * then sets the list pointer to NULL.
  * Return: nothing.
  */
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 
 /*
- * Loop each nodes and set content with f.
- * Return: nothing
+ * Iterates over the list and applies the function f to the content
+ * of each node.
+ * Return: nothing.
  */
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /*
- * Loop each nodes and create a new list with the result set of f of node.
- * Del is necessary if a allocating failed.
- * Return: the new list (the first node)
+ * Iterates over the list and builds a new list whose nodes hold the
+ * successive results of f applied to each content. If a node
+ * allocation fails, the new list is cleared with del.
+ * Return: the first node of the new list, or NULL on failure.
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
